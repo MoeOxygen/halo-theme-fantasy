@@ -4,6 +4,8 @@
 
 ![image](https://img.shields.io/badge/Halo-1.5.4-blue.svg)
 
+详情&更新日志: [Fantasy 幻想动漫风主题 - MoeOxygen](https://blog.moea.top/archives/fantasy)
+
 ## 预览
 
 Demo: [fantasy.love520.top](https://fantasy.love520.top)

@@ -1,0 +1,54 @@
+genernal:
+  label: 基本设置
+  items:
+    background_picture:
+      name: background_picture
+      label: 首页背景图
+      type: attachment
+      default: '/themes/Fantasy/source/images/background.png'
+    site_custom_style:
+      name: site_custom_style
+      label: 自定义CSS样式
+      type: textarea
+social:
+  label: 社交信息
+  items:
+    social_github:
+      name: social_github
+      label: Github主页链接
+      type: text
+      default: ""
+      description: "留空则不展示"
+    social_weibo:
+      name: social_weibo
+      label: 微博主页链接
+      type: text
+      default: ""
+      description: "留空则不展示"
+    social_twitter:
+      name: social_twitter
+      label: Twitter主页链接
+      type: text
+      default: ""
+      description: "留空则不展示"
+    social_qq:
+      name: social_qq
+      label: QQ号
+      type: text
+      default: ""
+      description: "留空则不展示"
+beian:
+  label: 备案信息
+  items:
+    icp_info:
+      name: icp_info
+      label: ICP备案号
+      type: text
+      default: ""
+      description: "留空则不展示ICP备案号"
+    ga_info:
+      name: ga_info
+      label: 公安备案号
+      type: text
+      default: ""
+      description: "留空则不展示公安备案号"

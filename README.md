@@ -29,6 +29,7 @@ Demo: [fantasy.love520.top](https://fantasy.love520.top)
 - [ ] 全局Pjax
 - [ ] 更像原版的评论样式
 - [ ] 原版的番剧页面
+- [ ] 静态文件CDN加速
 - [ ] 标签云
 - [ ] 站点运行时间
 

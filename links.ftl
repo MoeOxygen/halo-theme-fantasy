@@ -27,5 +27,7 @@
     </div>
         </main>
 </@layout>
+<#include "module/comment.ftl">
+    <@comment post=post type="post" />
 <#include "footer.ftl">
 <@footer />

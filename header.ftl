@@ -1,3 +1,4 @@
+<#--该主题移植自奇趣保罗的 Typecho 主题: Fantasy-->
 <#macro layout title>
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans">

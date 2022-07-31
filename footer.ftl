@@ -76,6 +76,27 @@
     </div>
 </footer>
 <script src="https://6.cdn.moea.top/js/jquery@3.6.0/jquery.min.js"></script>
+<#if is_index??>
+<script>
+    window.onload=function(){
+	$.ajax({
+		type: "GET",
+		url: "https://api.bgm.tv/v0/users/${settings.bangumi_user!}/collections",
+		dataType: "json",
+		success: function(result){
+			let json=result.data;
+			for(i=0;i<json.length;i++){
+			var trTD = "<div class='col-6 col-m-4' id='bangumi-info'><a class='bangumi-item' target='_blank' href='https://bgm.tv/subject/"+json[i].subject_id+"'><div class='bangumi-img' style='background-image: url("+json[i].subject.images.large+")'><div class='bangumi-status'><div class='bangumi-status-bar' style='width: "+json[i].ep_status+"%'></div><p>进度: "+json[i].ep_status+" / "+json[i].subject.eps+"</p></div></div><h3>"+json[i].subject.name+"</h3></a></div>";
+				$("#bangumi-info").append(trTD);
+			}
+		},
+		error: function(){
+			var trTD = "<div class='col-12'><p>追番数据获取失败，请检查如下细节：</p><ul><li>用户 ID 是否正确？</li><li>该用户是否在“在看”添加了番剧？</li><li>服务器能否正常连接 <code>api.bgm.tv</code> ？</li></ul></div>";
+		}
+	});
+}();
+</script>
+</#if>
 <script src="${theme_base!}/source/js/rain.js"></script>
 <script src="${theme_base!}/source/js/kico.js"></script>
 

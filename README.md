@@ -4,7 +4,7 @@
 
 ![image](https://img.shields.io/badge/Halo-1.5.4-blue.svg)
 
-详情&更新日志: [Fantasy 幻想动漫风主题 - MoeOxygen](https://blog.moea.top/archives/fantasy)
+详情&更新日志: [Fantasy 幻想动漫风主题 - MoeOxygen](https://12th.icu/fantasy)
 
 ## 预览
 
@@ -25,12 +25,12 @@ Demo: [fantasy.love520.top](https://fantasy.love520.top)
 - [x] 代码高亮
 - [x] 404 页面
 - [x] 随机一言
+- [x] 原版的番剧页面
 
 ## 未来支持的功能
 
 - [ ] 全局Pjax
 - [ ] 更像原版的评论样式
-- [ ] 原版的番剧页面
 - [ ] 静态文件CDN加速
 - [ ] 标签云
 - [ ] 站点运行时间

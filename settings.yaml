@@ -52,3 +52,12 @@ beian:
       type: text
       default: ""
       description: "留空则不展示公安备案号"
+bangumi:
+  label: 追番信息
+  items:
+    bangumi_user:
+      name: bangumi_user
+      label: 用户名或UID
+      type: text
+      default: ""
+      description: "如果设置用户名请输入用户名, 未设置请输入UID"

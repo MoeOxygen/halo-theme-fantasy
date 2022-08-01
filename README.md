@@ -10,7 +10,7 @@
 
 Demo: [fantasy.love520.top](https://fantasy.love520.top)
 
-![image](http://8.cdn.moea.top/halo-theme-fantasy/demo.png)
+![image](./screenshot.png)
 
 
 ## 说明

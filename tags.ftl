@@ -10,7 +10,7 @@
             <#if tags?? && tags?size gt 0>
                 <#list tags as tag>
                     <div class="post-item">
-                    <h3 class="title"><a href="${tag.fullPath!}">${tag.name}</a></h3>
+                    <h3 class="title"><a href="${tag.fullPath!}">${tag.name!}</a></h3>
                     </div>
                 </#list>
             </#if>

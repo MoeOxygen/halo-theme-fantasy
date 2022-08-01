@@ -11,11 +11,11 @@
         <@linkTag method="list">
             <#if links?? && links?size gt 0>
                 <#list links as link>
-                    <a class="friends-link" href="${link.url}" target="_blank" rel="external">
-                    <img src="${link.logo}" />
-                    <h3 class="link-name">${link.name}</h3>
+                    <a class="friends-link" href="${link.url!}" target="_blank" rel="external">
+                    <img src="${link.logo!}" />
+                    <h3 class="link-name">${link.name!}</h3>
                         <#if link.description!=''>
-                            <p class="link-desc">${link.description}</p>
+                            <p class="link-desc">${link.description!}</p>
                         </#if>
                     </a>
                 </#list>

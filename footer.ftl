@@ -24,17 +24,17 @@
                     <ul class="clear">
                         <@postTag method="archiveMonth" top="6">
                             <#list archives as archive>
-                                <li>${archive.year?c}-${archive.month?c}</li>   
+                                <li>${archive.year?c} 年 ${archive.month?c} 月</li>   
                             </#list>
                         </@postTag>
                     </ul>
                 </div>
                 <div class="col-m-3">
                   <h3>最近评论：</h3>
-                    <@commentTag method="latest" top="5">
+                    <@commentTag method="latest" top="6">
                         <ul class="clear">
                             <#list comments.content as comment>
-                                <li>${comment.author!}：${comment.content!}</li>
+                                <li>${comment.author!}: ${comment.content!}</li>
                             </#list>
                         </ul>
                     </@commentTag>
@@ -54,17 +54,16 @@
         <section class="foot-copyright">
             <div class="row">
                 <div class="col-m-6 left bottom to-center">
-                    <#if settings.icp_info??  && settings.icp_info != ""><#--ICP备案号-->
-                        <p><a href="https://beian.miit.gov.cn" rel="nofollow" target="_blank">${settings.icp_info}</a></p>
+                    <#if settings.icp_info??  && settings.icp_info != "">
+                        <p><a href="https://beian.miit.gov.cn" rel="nofollow" target="_blank">${settings.icp_info!}</a></p>
                     </#if>
-                    <#if settings.ga_info??  && settings.ga_info != ""><#--公安备案号-->
+                    <#if settings.ga_info??  && settings.ga_info != "">
                         <p>
 				            <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=${settings.ga_info!}" rel="nofollow" target="_blank">
-					        <img src="${theme_base!}/source/images/beian.png">${settings.ga_info}
+					        <img src="${theme_base!}/source/images/beian.png">${settings.ga_info!}
 				            </a>
                         </p>
 				    </#if>
-                    <#--随机一言,to do-->
                     <p class="foot-hitokoto">重要的是无论我们选择哪条路，都要担负起选择的责任。</p>
                 </div>
                 <div class="col-m-6 right bottom to-center"><!--请保留版权, 该主题移植自奇趣保罗的 Typecho 主题: Fantasy-->
@@ -76,7 +75,8 @@
     </div>
 </footer>
 <script src="https://6.cdn.moea.top/js/jquery@3.6.0/jquery.min.js"></script>
-<#if is_index??>
+<#if settings.bangumi_bool!true>
+<#if is_sheet??>
 <script>
     window.onload=function(){
 	$.ajax({
@@ -86,7 +86,7 @@
 		success: function(result){
 			let json=result.data;
 			for(i=0;i<json.length;i++){
-			var trTD = "<div class='col-6 col-m-4' id='bangumi-info'><a class='bangumi-item' target='_blank' href='https://bgm.tv/subject/"+json[i].subject_id+"'><div class='bangumi-img' style='background-image: url("+json[i].subject.images.large+")'><div class='bangumi-status'><div class='bangumi-status-bar' style='width: "+json[i].ep_status+"%'></div><p>进度: "+json[i].ep_status+" / "+json[i].subject.eps+"</p></div></div><h3>"+json[i].subject.name+"</h3></a></div>";
+			var trTD = "<div class='col-6 col-m-4' id='bangumi-info'><a class='bangumi-item' target='_blank' href='https://bgm.tv/subject/"+json[i].subject_id+"'><div class='bangumi-img' style='background-image: url("+json[i].subject.images.large+")'><div class='bangumi-status'><div class='bangumi-status-bar' style='width: "+json[i].ep_status / json[i].subject.eps * 100+"%'></div><p>进度: "+json[i].ep_status+" / "+json[i].subject.eps+"</p></div></div><h3>"+json[i].subject.name+"</h3></a></div>";
 				$("#bangumi-info").append(trTD);
 			}
 		},
@@ -96,6 +96,7 @@
 	});
 }();
 </script>
+</#if>
 </#if>
 <script src="${theme_base!}/source/js/rain.js"></script>
 <script src="${theme_base!}/source/js/kico.js"></script>

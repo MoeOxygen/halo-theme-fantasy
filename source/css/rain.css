@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+/* rain.css */
+
+article {
+    letter-spacing: 0.03em;
+}
+
+.friends-link {
+    float: left;
+    height: 5em;
+    display: block;
+    width: 33.3333%;
+    position: relative;
+    margin-bottom: 1em;
+    padding: 0.5em 0.5em 0.5em 5.5em;
+}
+
+.friends-link img {
+    top: 0.5em;
+    left: 0.5em;
+    max-width: 4em;
+    position: absolute;
+    border-radius: 66%;
+}
+
+.friends-link .link-name {
+    color: rgb(119, 119, 144);
+    font-size: 1.2em;
+    margin-bottom: 0.25em;
+}
+
+.friends-link .link-desc {
+    color: rgb(187, 187, 187);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

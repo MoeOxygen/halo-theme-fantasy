@@ -1,9 +1,9 @@
 <#include "header.ftl">
-<@layout title="标签：${tag.name} - ${blog_title!}">
+<@layout title="标签：${tag.name!} - ${blog_title!}">
     <main>
     <div class="wrap min">
         <section class="board head">
-            <h3>标签：${tag.name}</h3>
+            <h3>标签：${tag.name!}</h3>
             </section>
     <section class="board">
         <#list posts.content as post>

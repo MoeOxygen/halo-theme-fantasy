@@ -9,10 +9,10 @@
         <time class="date">${post.createTime?string('yyyy-MM-dd')}</time>
         <@categoryTag method="listByPostId" postId="${post.id?c}">
         <#list categories as category>
-        <span class="category"><a href="${category.fullPath!}">${category.name}</a></span>
+        <span class="category"><a href="${category.fullPath!}">${category.name!}</a></span>
         </#list>
         </@categoryTag>
-        <span class="comments">${post.commentCount} 评论</span>
+        <span class="comments">${post.commentCount!} 评论</span>
     </div>
     </div>
     <article class="post-content">

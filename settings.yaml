@@ -55,9 +55,20 @@ beian:
 bangumi:
   label: 追番信息
   items:
+    bangumi_bool:
+      name: bangumi_bool
+      label: 开启
+      type: radio
+      data-type: bool
+      default: false
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
     bangumi_user:
       name: bangumi_user
-      label: 用户名或UID
+      label: 用户名
       type: text
       default: ""
-      description: "如果设置用户名请输入用户名, 未设置请输入UID"
+      description: "Bangumi用户名"

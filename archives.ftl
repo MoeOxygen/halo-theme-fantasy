@@ -23,7 +23,7 @@
 
     <#if posts.totalPages gt 1>
             <section class="page-navigator">
-                <@paginationTag method="archives" page="${posts.number}" total="${posts.totalPages}" display="3">
+                <@paginationTag method="archives" page="${posts.number!}" total="${posts.totalPages!}" display="3">
                     <#if pagination.hasPrev>
                         <span class="prev">
                             <a href="${pagination.prevPageFullPath!}"></a>

@@ -5,12 +5,12 @@
         <section class="board">
             <div class="post-title">
     <h2>${sheet.title!}</h2>
-    </div>
     <div class="post-meta">
         <time class="date">${post.createTime?string('yyyy-MM-dd')}</time>
         <@commentTag method="count">
-        <span class="comments">${count!0} 评论</span>
+        <span class="comments">${sheet.commentCount!} 评论</span>
         </@commentTag>
+    </div>
     </div>
     <article class="post-content">
         ${sheet.formatContent!}

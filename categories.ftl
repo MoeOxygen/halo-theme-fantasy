@@ -10,7 +10,7 @@
             <#if categories?? && categories?size gt 0>
                 <#list categories as category>
             <div class="post-item">
-                    <h3 class="title"><a href="${category.fullPath!}">${category.name}</a></h3>
+                    <h3 class="title"><a href="${category.fullPath!}">${category.name!}</a></h3>
                     </div>
                 </#list>
             </#if>

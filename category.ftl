@@ -1,9 +1,9 @@
 <#include "header.ftl">
-<@layout title="分类：${category.name} - ${blog_title!}">
+<@layout title="分类：${category.name!} - ${blog_title!}">
     <main>
     <div class="wrap min">
         <section class="board head">
-            <h3>分类：${category.name}</h3>
+            <h3>分类：${category.name!}</h3>
             </section>
             <section class="board">
         <#list posts.content as post>

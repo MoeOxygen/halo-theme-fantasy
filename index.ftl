@@ -8,7 +8,7 @@
         <#list posts.content as post>
         <div class="post-item">
                 <time class="date">${post.createTime?string('yyyy-MM-dd')}</time>
-                <h3 class="title"><a href="${post.fullPath!}">${post.title}</a></h3>
+                <h3 class="title"><a href="${post.fullPath!}">${post.title!}</a></h3>
         </div>
         </#list>
         </section>

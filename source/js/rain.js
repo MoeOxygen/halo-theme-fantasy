@@ -27,6 +27,16 @@ $(".toggle").click(function () {
 	}
 });
 
+var pjax = new Pjax({
+	elements: "a:not([target=_blank])",
+	selectors: [
+           "title", "meta[name=keywords]", "meta[name=description]", "main"
+        ],
+	cacheBust: false,
+	history: true,
+    timeout: 3000
+});
+
 //
 if (window.console && window.console.log) {
     console.log("%c Fantasy主题 %c https://12th.icu/fantasy ","color: #fff; margin: 1em 0; padding: 5px 0; background: #ffa9be;","margin: 1em 0; padding: 5px 0; background: #efefef;");

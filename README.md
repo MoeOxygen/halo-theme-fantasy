@@ -26,10 +26,10 @@ Demo: [fantasy.love520.top](https://fantasy.love520.top)
 - [x] 404 页面
 - [x] 随机一言
 - [x] 原版的番剧页面
+- [x] Pjax无刷新加载
 
 ## 未来支持的功能
 
-- [ ] 全局Pjax
 - [ ] 更像原版的评论样式
 - [ ] 静态文件CDN加速
 - [ ] 标签云
@@ -52,4 +52,4 @@ Demo: [fantasy.love520.top](https://fantasy.love520.top)
 ## 版权
 
 **halo-theme-fantasy** &copy; MoeOxygen 
-基于 [MIT](./LICENSE) 许可证发行
+基于  [![MIT](https://img.shields.io/badge/license-MIT-orange.svg)](https://github.com/MoeOxygen/halo-theme-fantasy/blob/main/LICENSE) 许可证发行

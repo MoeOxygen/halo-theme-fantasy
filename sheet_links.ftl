@@ -7,8 +7,8 @@
     <h2>${sheet.title!}</h2>
     </div>
     <article class="post-content exclude-image exclude-tree">
-    <div class="clearfix">
     ${sheet.formatContent!}
+    <div class="clearfix">
         <@linkTag method="list">
             <#if links?? && links?size gt 0>
                 <#list links as link>

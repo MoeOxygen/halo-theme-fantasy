@@ -36,3 +36,11 @@ article {
     text-overflow: ellipsis;
     overflow: hidden;
 }
+
+@media screen and (max-width: 600px){
+    .friends-link{ width: 50% }
+}
+
+@media screen and (max-width: 450px){
+    .friends-link{ width: 100% }
+}

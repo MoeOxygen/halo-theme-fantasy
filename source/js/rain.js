@@ -30,7 +30,7 @@ $(".toggle").click(function () {
 var pjax = new Pjax({
 	elements: "a:not([target=_blank])",
 	selectors: [
-           "title", "meta[name=keywords]", "meta[name=description]", "main"
+           "title", "meta[name=keywords]", "meta[name=description]", "body"
         ],
 	cacheBust: false,
 	history: true,

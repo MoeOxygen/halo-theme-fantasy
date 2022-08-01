@@ -74,7 +74,7 @@
         </section>
     </div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/pjax@VERSION/pjax.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
 <script src="https://6.cdn.moea.top/js/jquery@3.6.0/jquery.min.js"></script>
 <#if settings.bangumi_bool!true>
 <#if is_sheet??>

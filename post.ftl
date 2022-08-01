@@ -1,5 +1,6 @@
 <#include "header.ftl">
 <@layout title="${post.title!} - ${blog_title!}">
+<div id="main">
 <main>
     <div class="wrap min">
         <section class="board">
@@ -21,8 +22,9 @@
     </section>
     </div>
 </main>
-    <#include "module/comment.ftl">
-    <@comment post=post type="post" />
+<#include "module/comment.ftl">
+<@comment post=post type="post" />
+</div>
 </@layout>
 <#include "footer.ftl">
 <@footer />

@@ -12,6 +12,9 @@
     <link href="${theme_base!}/source/css/kico.css" rel="stylesheet" type="text/css"/>
     <link href="${theme_base!}/source/css/fantasy.css" rel="stylesheet" type="text/css"/>
     <link href="https://6.cdn.moea.top/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <#if settings.aplayer_bool!true>
+    <link href="${theme_base!}/source/css/APlayer.min.css" rel="stylesheet" type="text/css"/>
+    </#if>
     <#if settings.site_custom_style??  && settings.site_custom_style != "">
     <style>${settings.site_custom_style!}</style>
     </#if>

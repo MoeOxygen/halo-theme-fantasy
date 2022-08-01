@@ -1,5 +1,6 @@
 <#include "header.ftl">
 <@layout title="${sheet.title!} - ${blog_title!}">
+<div id="main">
 <main>
     <div class="wrap min">
         <section class="board">
@@ -20,8 +21,8 @@
 </main>
     <#include "module/comment.ftl">
     <@comment post=sheet type="sheet" />
+</div>
 </@layout>
-
 <#include "footer.ftl">
 <@footer />
 

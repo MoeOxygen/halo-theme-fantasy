@@ -1,7 +1,8 @@
 # halo-theme-fantasy
 「梦想、梦幻」
-
 适用于 Halo博客 的 Fantasy 主题
+
+![image](https://img.shields.io/badge/Halo-1.5.4-blue.svg)
 
 详情&更新日志: [Fantasy 幻想动漫风主题 - MoeOxygen](https://12th.icu/fantasy)
 
@@ -9,7 +10,7 @@
 
 Demo: [fantasy.love520.top](https://fantasy.love520.top)
 
-![image](./screenshot.png)
+![image](http://8.cdn.moea.top/halo-theme-fantasy/demo.png)
 
 
 ## 说明
@@ -50,6 +51,5 @@ Demo: [fantasy.love520.top](https://fantasy.love520.top)
 
 ## 版权
 
-**halo-theme-fantasy** &copy; MoeOxygen
-
+**halo-theme-fantasy** &copy; MoeOxygen 
 基于 [![MIT](https://img.shields.io/badge/license-MIT-orange.svg)](https://github.com/MoeOxygen/halo-theme-fantasy/blob/main/LICENSE) 许可证发行

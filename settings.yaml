@@ -52,12 +52,18 @@ beian:
       type: text
       default: ""
       description: "留空则不展示公安备案号"
-bangumi:
-  label: 追番信息
+plugins:
+  label: 插件设置
   items:
-    bangumi_bool:
-      name: bangumi_bool
-      label: 开启
+    bangumi_user:
+      name: bangumi_user
+      label: Bangumi用户名
+      type: text
+      default: ""
+      description: "Bangumi用户名"
+    aplayer_bool:
+      name: aplayer_bool
+      label: APlayer开关
       type: radio
       data-type: bool
       default: false
@@ -66,9 +72,9 @@ bangumi:
           label: 开启
         - value: false
           label: 关闭
-    bangumi_user:
-      name: bangumi_user
-      label: 用户名
+    aplayer_id:
+      name: aplayer_id
+      label: 音乐/歌单 ID
       type: text
       default: ""
-      description: "Bangumi用户名"
+      description: "网易云音乐的歌单/音乐 ID"

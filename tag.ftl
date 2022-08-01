@@ -1,6 +1,7 @@
 <#include "header.ftl">
 <@layout title="标签：${tag.name!} - ${blog_title!}">
-    <main>
+<div id="main">
+<main>
     <div class="wrap min">
         <section class="board head">
             <h3>标签：${tag.name!}</h3>
@@ -43,7 +44,8 @@
                 </@paginationTag>
             </section>
         </#if>
-    </main>
+</main>
+</div>
 </@layout>
 <#include "footer.ftl">
 <@footer />

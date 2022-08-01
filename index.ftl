@@ -1,7 +1,6 @@
 <#include "header.ftl">
 <@layout title="${blog_title!}">
-
-
+<div id="main">
 <main>
     <div class="wrap min">
         <section class="board">
@@ -42,7 +41,7 @@
             </section>
         </#if>
 </main>
+</div>
 </@layout>
-
 <#include "footer.ftl">
 <@footer />

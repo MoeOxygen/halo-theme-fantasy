@@ -1,5 +1,6 @@
 <#include "header.ftl">
 <@layout title="分类列表 - ${blog_title!}">
+<div id="main">
 <main>
     <div class="wrap min">
         <section class="board head">
@@ -18,7 +19,7 @@
         </section>
         </div>
         </main>
+</div>
 </@layout>
-
 <#include "footer.ftl">
 <@footer />

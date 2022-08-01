@@ -1,6 +1,7 @@
 <#include "header.ftl">
 <@layout title="标签列表 - ${blog_title!}">
-    <main>
+<div id="main">
+<main>
     <div class="wrap min">
         <section class="board head">
     <h3>标签列表</h3>
@@ -15,10 +16,10 @@
                 </#list>
             </#if>
         </@tagTag>
-        </section>
-        </div>
-        </main>
+    </section>
+    </div>
+</main>
+</div>
 </@layout>
-
 <#include "footer.ftl">
 <@footer />

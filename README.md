@@ -1,5 +1,6 @@
 # halo-theme-fantasy
 「梦想、梦幻」
+
 适用于 Halo博客 的 Fantasy 主题
 
 详情&更新日志: [Fantasy 幻想动漫风主题 - MoeOxygen](https://12th.icu/fantasy)

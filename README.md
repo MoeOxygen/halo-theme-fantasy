@@ -51,5 +51,6 @@ Demo: [fantasy.love520.top](https://fantasy.love520.top)
 
 ## 版权
 
-**halo-theme-fantasy** &copy; MoeOxygen 
-基于  [![MIT](https://img.shields.io/badge/license-MIT-orange.svg)](https://github.com/MoeOxygen/halo-theme-fantasy/blob/main/LICENSE) 许可证发行
+**halo-theme-fantasy** &copy; MoeOxygen
+
+基于 [![MIT](https://img.shields.io/badge/license-MIT-orange.svg)](https://github.com/MoeOxygen/halo-theme-fantasy/blob/main/LICENSE) 许可证发行

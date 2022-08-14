@@ -8,7 +8,6 @@
     <#list photos as photo>
     <div class="photos-card">
     <div class="card-img" style="background-image: url(${photo.url})">
-        <p>${photo.description}</p>
     </div>
     <div class="photos-info">
     <h3>${photo.name!}</h3>

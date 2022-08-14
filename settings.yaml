@@ -55,23 +55,30 @@ beian:
 plugins:
   label: 插件设置
   items:
+    hitokoto_bool:
+      name: hitokoto_bool
+      label: 一言
+      type: radio
+      data-type: bool
+      default: false
+      description: '是否展示一言'
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    created_time:
+      name: created_time
+      label: 建站时间
+      type: text
+      default: ""
+      description: "格式: 2022/01/01 留空则不展示"
     bangumi_user:
       name: bangumi_user
       label: Bangumi用户名
       type: text
       default: ""
       description: "Bangumi用户名"
-    aplayer_bool:
-      name: aplayer_bool
-      label: APlayer开关
-      type: radio
-      data-type: bool
-      default: false
-      options:
-        - value: true
-          label: 开启
-        - value: false
-          label: 关闭
     aplayer_id:
       name: aplayer_id
       label: 音乐/歌单 ID

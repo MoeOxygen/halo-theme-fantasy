@@ -3,13 +3,13 @@
 
 适用于 Halo博客 的 Fantasy 主题
 
-详情&更新日志: [Fantasy 幻想动漫风主题 - MoeOxygen](https://12th.icu/fantasy)
+ [![MIT](https://img.shields.io/badge/halo--theme--fantasy-1.1.0-blue.svg)](https://github.com/MoeOxygen/halo-theme-fantasy/)
 
 ## 预览
 
 Demo: [fantasy.love520.top](https://fantasy.love520.top)
 
-![image](./screenshot.png)
+![image](https://fantasy.love520.top/themes/Fantasy/screenshot.png)
 
 
 ## 说明
@@ -20,19 +20,21 @@ Demo: [fantasy.love520.top](https://fantasy.love520.top)
 
 - [x] 适配 Halo 1.5.4 版本
 - [x] 响应式主题
-- [x] 稳定
+- [x] ~~稳定~~
 - [x] 代码高亮
-- [x] 404 页面
 - [x] 随机一言
 - [x] 原版的番剧页面
 - [x] Pjax无刷新加载
 - [x] APlayer
+- [x] 支持图库和日志
+- [x] 站点运行时间
+- [x] 像原版的评论样式
 
 ## 未来支持的功能
 
-- [ ] 更像原版的评论样式
+
 - [ ] 标签云
-- [ ] 站点运行时间
+- [ ] 文章目录
 
 ## 安装主题
 

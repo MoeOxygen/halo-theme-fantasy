@@ -64,7 +64,12 @@
 				            </a>
                         </p>
 				    </#if>
+                    <#if settings.hitokoto_bool!false>
                     <p class="foot-hitokoto">重要的是无论我们选择哪条路，都要担负起选择的责任。</p>
+                    </#if>
+                    <#if settings.created_time?? && settings.created_time != ''>
+                    <p class="foot-date">站点已萌萌哒存活了 <a>?</a> 天 <a>?</a> 小时 <a>?</a> 分 <a>?</a> 秒</p>
+                    </#if>
                 </div>
                 <div class="col-m-6 right bottom to-center"><!--请保留版权, 该主题移植自奇趣保罗的 Typecho 主题: Fantasy-->
                     <p>&copy; ${.now?string("yyyy")} <a href="${blog_url!}">${blog_title!}</a> 版权所有</p>
@@ -78,12 +83,13 @@
 <script src="https://6.cdn.moea.top/js/jquery@3.6.0/jquery.min.js"></script>
 <script>
     var rain = {
-        "bangumid":"${settings.bangumi_user}",
+        "bangumid":"${settings.bangumi_user!}",
+        "created":"${settings.created_time!}",
     };
 </script>
-<script src="${theme_base!}/source/js/rain.js"></script>
 <script src="${theme_base!}/source/js/kico.js"></script>
-<#if settings.aplayer_bool!true>
+<script src="${theme_base!}/source/js/rain.js"></script>
+<#if settings.aplayer_id?? && settings.aplayer_id != ''>
 <script src="${theme_base!}/source/js/APlayer.min.js"></script>
 <script src="${theme_base!}/source/js/Meting.min.js"></script>
 <meting-js fixed="true" server="netease" type="playlist" id="${settings.aplayer_id!}"></meting-js>

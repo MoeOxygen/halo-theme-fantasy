@@ -3,7 +3,7 @@
 
 适用于 Halo博客 的 Fantasy 主题
 
- [![MIT](https://img.shields.io/badge/halo--theme--fantasy-1.1.0-blue.svg)](https://github.com/MoeOxygen/halo-theme-fantasy/)
+ [![MIT](https://img.shields.io/badge/halo--theme--fantasy-1.1.2-blue.svg)](https://github.com/MoeOxygen/halo-theme-fantasy/)
 
 ## 预览
 

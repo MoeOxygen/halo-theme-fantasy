@@ -14,6 +14,7 @@
             <form class="search-form" method="post">
                 <input type="text" name="s" placeholder="搜索什么?">
             </form>
+            <#--分类(暂时不做)-->
         </div>
     </div>
 </aside>

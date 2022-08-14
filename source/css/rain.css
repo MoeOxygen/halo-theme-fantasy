@@ -1,1 +1,151 @@
-@charset "UTF-8";article{letter-spacing:0.03em}.friends-link{float:left;height:5em;display:block;width:33.3333%;position:relative;margin-bottom:1em;padding:0.5em 0.5em 0.5em 5.5em}.friends-link img{top:0.5em;left:0.5em;max-width:4em;position:absolute;border-radius:66%}.friends-link .link-name{color:rgb(119,119,144);font-size:1.2em;margin-bottom:0.25em}.friends-link .link-desc{color:rgb(187,187,187);white-space:nowrap;text-overflow:ellipsis;overflow:hidden}@media screen and (max-width:600px){.friends-link{width:50%}}@media screen and (max-width:450px){.friends-link{width:100%}}.wrap-photos{max-width:55em;margin:0 auto;padding:0 1.25em;box-sizing:content-box}.card-grid{display:grid;grid-gap:2em;grid-template-columns:repeat(auto-fill,minmax(15em,1fr))}.photos-card{overflow:hidden;background:#fff;border-radius:2em;transition:transform .3s}.photos-card:hover{transform:translateY(-.3em)}@media screen and (max-width:600px){.card-grid{margin:0 1.25em}}.card-img{position:relative;background:center/cover;padding-bottom:70%}.card-date{display:block;color:#ffa9be;font-size:.85em;margin-bottom:.5em}.photos-card:hover p{opacity:1}.photos-card p{top:0;left:0;right:0;bottom:0;color:#fff;font-size:.85em;padding:1.5em;line-height:2;position:absolute;transition:opacity .3s;background:rgba(0,0,0,.1)}.photos-info{padding:1em}.photos-card h3{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;transition:opacity .3s}
+@charset "UTF-8";
+
+/* rain.css */
+
+article {
+    letter-spacing: 0.03em;
+}
+
+.friends-link {
+    float: left;
+    height: 5em;
+    display: block;
+    width: 33.3333%;
+    position: relative;
+    margin-bottom: 1em;
+    padding: 0.5em 0.5em 0.5em 5.5em;
+}
+
+.friends-link img {
+    top: 0.5em;
+    left: 0.5em;
+    max-width: 4em;
+    position: absolute;
+    border-radius: 66%;
+}
+
+.friends-link .link-name {
+    color: rgb(119, 119, 144);
+    font-size: 1.2em;
+    margin-bottom: 0.25em;
+}
+
+.friends-link .link-desc {
+    color: rgb(187, 187, 187);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 600px){
+    .friends-link{ width: 50% }
+}
+
+@media screen and (max-width: 450px){
+    .friends-link{ width: 100% }
+}
+
+.wrap-photos {
+    max-width: 55em;
+    margin: 0 auto;
+    padding: 0 1.25em;
+    box-sizing: content-box;
+}
+
+.card-grid{
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+}
+
+.photos-card{
+    overflow: hidden;
+    background: #fff;
+    border-radius: 2em;
+    transition: transform .3s;
+}
+
+.photos-card:hover{
+    transform: translateY(-.3em);
+}
+
+@media screen and (max-width: 600px){
+    .card-grid{
+        margin: 0 1.25em;
+    }
+}
+
+.card-img{
+    position: relative;
+    background: center/cover;
+    padding-bottom: 70%;
+}
+
+.card-date{
+    display: block;
+    color: #ffa9be;
+    font-size: .85em;
+    margin-bottom: .5em;
+}
+
+.photos-info{ 
+    padding: 1em;
+}
+
+.photos-card h3{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: opacity .3s;
+}
+
+.loading {
+    filter: blur(5px);
+}
+
+.jr-main>.item {
+    width: 100%;
+    display: block;
+    position: relative;
+    text-align: justify;
+    word-break: break-all;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.jr-main .jr-line {
+    position: absolute;
+    left: 29px;
+    width: 4px;
+    height: 100%;
+    background-color: #eee;
+}
+.jr-main .jr-dot {
+    z-index: 100;
+    display: inline-block;
+    position: absolute;
+    left: 25px;
+    top: 0;
+    padding: 3px;
+    border: 3px solid #eee;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 3px 3px 8px #ccc;
+}
+.jr-main .jr-pt {
+    border: 3px solid #ffa9be;
+}
+.jr-main>.item>.jr-box {
+    padding: 10px 0;
+}
+.jr-main>.item .jr-cbox {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;;
+    background: #ffa9be;
+}
+.jr-main>.item .jr-cbox>div{
+    margin:0 10px;
+    color: #FFFFFF;
+}

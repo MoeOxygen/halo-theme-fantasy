@@ -3,13 +3,13 @@
 
 适用于 Halo博客 的 Fantasy 主题
 
- [![MIT](https://img.shields.io/badge/halo--theme--fantasy-1.1.2-blue.svg)](https://github.com/MoeOxygen/halo-theme-fantasy/)
+更新日志&其它: [12th.icu/fantasy](https://12th.icu/fantasy)
 
 ## 预览
 
-Demo: [fantasy.love520.top](https://fantasy.love520.top)
+Demo: [fantasy.moea.top](https://fantasy.moea.top)
 
-![image](https://fantasy.love520.top/themes/Fantasy/screenshot.png)
+![image](https://fantasy.moea.top/themes/Fantasy/screenshot.png)
 
 
 ## 说明

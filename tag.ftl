@@ -1,6 +1,5 @@
 <#include "header.ftl">
 <@layout title="标签：${tag.name!} - ${blog_title!}">
-<div id="main">
 <main>
     <div class="wrap min">
         <section class="board head">

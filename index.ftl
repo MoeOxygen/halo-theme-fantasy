@@ -8,6 +8,9 @@
         <div class="post-item">
                 <time class="date">${post.createTime?string('yyyy-MM-dd')}</time>
                 <h3 class="title"><a href="${post.fullPath!}">${post.title!}</a></h3>
+                <#if settings.index_summary!false>
+                <p>${post.summary!}</p>
+                </#if>
         </div>
         </#list>
         </section>

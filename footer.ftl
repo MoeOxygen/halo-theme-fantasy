@@ -24,7 +24,7 @@
                     <ul class="clear">
                         <@postTag method="archiveMonth" top="6">
                             <#list archives as archive>
-                                <li>${archive.year?c} 年 ${archive.month?c} 月</li>   
+                                <li><a href="${archives_url!}#${archive.year?c}">${archive.year?c} 年 ${archive.month?c} 月</a></li>   
                             </#list>
                         </@postTag>
                     </ul>
@@ -34,7 +34,7 @@
                     <@commentTag method="latest" top="6">
                         <ul class="clear">
                             <#list comments.content as comment>
-                                <li>${comment.author!}: ${comment.content!}</li>
+                                <li><a href="${comment.post.fullPath!}#comment-${comment.id!}">${comment.author!}: ${comment.content!}</a></li>
                             </#list>
                         </ul>
                     </@commentTag>
@@ -65,14 +65,14 @@
                         </p>
 				    </#if>
                     <#if settings.hitokoto_bool!false>
-                    <p class="foot-hitokoto">重要的是无论我们选择哪条路，都要担负起选择的责任。</p>
+                    <p id="foot-hitokoto">重要的是无论我们选择哪条路，都要担负起选择的责任。</p>
                     </#if>
                     <#if settings.created_time?? && settings.created_time != ''>
-                    <p class="foot-date">站点已萌萌哒存活了 <a>?</a> 天 <a>?</a> 小时 <a>?</a> 分 <a>?</a> 秒</p>
+                    <p class="foot-date">站点已萌萌哒存活了 <a>0</a> 天 <a>0</a> 小时 <a>0</a> 分 <a>0</a> 秒</p>
                     </#if>
                 </div>
                 <div class="col-m-6 right bottom to-center"><!--请保留版权, 该主题移植自奇趣保罗的 Typecho 主题: Fantasy-->
-                    <p>&copy; ${.now?string("yyyy")} <a href="${blog_url!}">${blog_title!}</a> 版权所有</p>
+                    <p>&copy; ${.now?string("yyyy")} <a href="${blog_url!}">${user.nickname!}</a> 版权所有</p>
                     <p>Powered by <a href="https://halo.run" target="_blank" rel="nofollow">Halo</a> | Theme by <a href="https://12th.icu/fantasy" target="_blank" rel="nofollow">Fantasy</a></p>
                 </div>
             </div>
@@ -88,7 +88,14 @@
     };
 </script>
 <script src="${theme_base!}/source/js/kico.js"></script>
+<script src="https://6.cdn.moea.top/js/highlight@11.6.0/highlight.min.js"></script>
+<#if settings.toc_bool!false>
+<script src="https://6.cdn.moea.top/js/tocbot@4.12.0/tocbot.min.js"></script>
+</#if>
 <script src="${theme_base!}/source/js/rain.js"></script>
+<#if settings.hitokoto_bool!false>
+<script src="https://v1.hitokoto.cn/?encode=js&select=%23foot-hitokoto" defer></script>
+</#if>
 <#if settings.aplayer_id?? && settings.aplayer_id != ''>
 <script src="${theme_base!}/source/js/APlayer.min.js"></script>
 <script src="${theme_base!}/source/js/Meting.min.js"></script>

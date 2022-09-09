@@ -2,10 +2,10 @@ id: Fantasy
 name: Fantasy
 author:
   name: MoeOxygen
-  website: https://blog.moea.top
+  website: https://blog.moeoxygen.com
 description: 适用于 Halo 的 Fantasy 主题
 logo: 
 website: https://12th.icu/fantasy
 repo: https://github.com/moeoxygen/halo-theme-fantasy
-version: 1.1.2
+version: 1.1.3
 require: 1.5.4

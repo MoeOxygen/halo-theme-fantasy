@@ -10,6 +10,18 @@ genernal:
       name: site_custom_style
       label: 自定义CSS样式
       type: textarea
+    index_summary:
+      name: index_summary
+      label: 首页文章摘要
+      type: radio
+      data-type: bool
+      default: false
+      description: '首页文章是否显示摘要'
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
 social:
   label: 社交信息
   items:
@@ -85,3 +97,18 @@ plugins:
       type: text
       default: ""
       description: "网易云音乐的歌单/音乐 ID"
+article:
+  label: 文章设置
+  items:
+    toc_bool:
+      name: toc_bool
+      label: 文章目录
+      type: radio
+      data-type: bool
+      default: false
+      description: '是否显示文章目录'
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭

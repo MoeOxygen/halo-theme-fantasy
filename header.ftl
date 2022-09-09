@@ -6,17 +6,32 @@
     <meta charset="UTF-8">
     <title>${title}</title>
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
     <meta name="keywords" content="${meta_keywords!}"/>
     <meta name="description" content="${meta_description!}" />
     <link href="${theme_base!}/source/css/rain.css" rel="stylesheet" type="text/css"/>
     <link href="${theme_base!}/source/css/kico.css" rel="stylesheet" type="text/css"/>
     <link href="${theme_base!}/source/css/fantasy.css" rel="stylesheet" type="text/css"/>
+    <#if settings.toc_bool!false>
+    <link rel="stylesheet" href="https://6.cdn.moea.top/css/tocbot@4.12.0/tocbot.css">
+    </#if>
     <link href="https://6.cdn.moea.top/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://6.cdn.moea.top/js/highlight@11.6.0/styles/androidstudio.min.css" rel="stylesheet" type="text/css">
     <#if settings.aplayer_bool!true>
     <link href="${theme_base!}/source/css/APlayer.min.css" rel="stylesheet" type="text/css"/>
     </#if>
-    <#if settings.site_custom_style??  && settings.site_custom_style != "">
-    <style>${settings.site_custom_style!}</style>
+    <#if settings.gray_style!false>
+    <style>
+      html {
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      -o-filter: grayscale(100%);
+      filter: grayscale(100%);
+      filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+      filter:gray;
+    }
+    </style>
     </#if>
     <style>
     body {

@@ -1,6 +1,5 @@
 <#include "header.ftl">
 <@layout title="图库 - ${blog_title!}">
-<div id="main">
 <main>
 <div class="wrap-photos">
 <section class="card-grid">
@@ -18,7 +17,6 @@
 </section>
 </div>
 </main>
-</div>
 </@layout>
 <#include "footer.ftl">
 <@footer />

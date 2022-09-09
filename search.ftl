@@ -1,6 +1,5 @@
 <#include "header.ftl">
 <@layout title="含关键词 ${keyword!} 的文章 - ${blog_title!}">
-<div id="main">
 <main>
     <div class="wrap min">
         <section class="board head">
@@ -44,7 +43,6 @@
                 </@paginationTag>
             </section>
         </#if>
-</div>
 </@layout>
 <#include "footer.ftl">
 <@footer />

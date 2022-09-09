@@ -1,6 +1,5 @@
 <#include "header.ftl">
 <@layout title="友链 - ${blog_title!}">
-<div id="main">
   <main>
     <div class="wrap min">
     <section class="board">
@@ -27,7 +26,6 @@
     </section>
     </div>
   </main>
-</div>
 </@layout>
 <#include "footer.ftl">
 <@footer />

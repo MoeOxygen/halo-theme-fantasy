@@ -33,7 +33,7 @@ Demo: [fantasy.moea.top](https://fantasy.moea.top)
 - [x] 文章目录
 
 ## 未来支持的功能
-- [ ] 不知道
+- [ ] 侧边栏多级导航
 
 
 ## 安装主题

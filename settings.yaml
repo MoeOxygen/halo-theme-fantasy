@@ -1,0 +1,58 @@
+apiVersion: v1alpha1
+kind: Setting
+metadata:
+  name: theme-fantasy-setting
+spec:
+  forms:
+    - group: genernal
+      label: 基本设置
+      formSchema:
+        - $formkit: text
+          name: background_image
+          label: 首页背景图
+          value: /themes/theme-fantasy/assets/images/background.png
+    - group: social
+      label: 社交信息
+      formSchema:
+        - $formkit: text
+          name: github
+          label: Github主页链接
+          value: ""
+          help: 留空则不展示
+        - $formkit: text
+          name: weibo
+          label: 微博主页链接
+          value: ""
+          help: 留空则不展示
+        - $formkit: text
+          name: twitter
+          label: Twitter主页链接
+          help: 留空则不展示
+        - $formkit: text
+          name: qq
+          label: QQ号
+          help: 留空则不展示
+    - group: beian
+      label: 备案信息
+      formSchema:
+        - $formkit: text
+          name: icp_info
+          label: ICP备案号
+          help: 留空则不展示ICP备案号
+        - $formkit: text
+          name: ga_info
+          label: 公安备案号
+          help: 留空则不展示公安备案号
+    - group: plugins
+      label: 插件设置
+      formSchema:
+        - $formkit: radio
+          name: hitokoto
+          label: 一言
+          value: o
+          help: 是否展示一言
+          options:
+            - label: 开启
+              value: o
+            - label: 关闭
+              value: c

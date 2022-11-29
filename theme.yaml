@@ -1,0 +1,17 @@
+apiVersion: theme.halo.run/v1alpha1
+kind: Theme
+metadata:
+  name: theme-fantasy
+spec:
+  displayName: Fantasy
+  author:
+    name: MoeOxygen
+    website: 'https://moeoxygen.com'
+  description: 适用于 Halo2.0 的 Fantasy 主题
+  logo: "https://halo.run/logo"
+  website: 'https://moeoxygen.com'
+  repo: 'https://github.com/MoeOxygen/halo-theme-fantasy/tree/master'
+  settingName: "theme-fantasy-setting"
+  configMapName: "theme-fantasy-configMap"
+  version: "2.0.0"
+  require: "2.0.0"

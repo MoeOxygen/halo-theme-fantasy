@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html
+  xmlns:th="https://www.thymeleaf.org"
+  th:replace="~{layout :: html(head = null,content = ~{::content})}"
+>
+  <th:block th:fragment="content">
+    <main>
+      <div class="wrap min">
+        <section class="board head">
+          <h3 th:text="'分类：'+${category.spec.displayName}"></h3>
+        </section>
+        <section class="board">
+          <div class="post-item" th:each="post : ${posts.items}">
+            <time class="date" th:text="${#dates.format(post.metadata.creationTimestamp, 'yyyy-MM-dd')}"></time>
+            <h3 class="title">
+              <a 
+                th:href="@{${post.status.permalink}}"
+                th:text="${post.spec.title}"></a>
+            </h3>
+          </div>
+        </section>
+      </div>
+      
+      <section class="page-navigator" th:if="${posts.hasPrevious() || posts.hasNext()}">
+        <span class="prev">
+          <a th:if="${posts.hasPrevious()}" th:href="@{${posts.prevUrl}}"></a>
+        </span>
+
+        <span class="current">
+          <a th:text="${posts.page}"></a>
+        </span>
+
+        <span class="next">
+          <a th:if="${posts.hasNext()}" th:href="@{${posts.nextUrl}}"></a>
+        </span>
+       </section>
+    </main>
+  </th:block>
+</html>

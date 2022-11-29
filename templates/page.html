@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html
+  xmlns:th="https://www.thymeleaf.org"
+  th:replace="~{layout :: html(head = null,content = ~{::content})}"
+>
+  <th:block th:fragment="content">
+    <main>
+      <div class="wrap min">
+        <section class="board">
+          <div class="post-title">
+            <h2 th:text="${singlePage.spec.title}"></h2>
+            <div class="post-meta">
+              <time class="date" th:text="${#dates.format(singlePage.metadata.creationTimestamp, 'yyyy-MM-dd')}"></time>
+              <span class="comments" th:text="${singlePage.stats.comment}+' 评论'"></span>
+            </div>
+          </div>
+          
+          <article th:utext="${singlePage.content.content}"></article>
+
+        </section>
+    </main>
+  </th:block>
+</html>

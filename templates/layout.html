@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html
+  lang="cmn-Hans"
+  xmlns:th="https://www.thymeleaf.org"
+  th:fragment="html (head,content)"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title th:text="${site.title}"></title>
+    <link rel="stylesheet" th:href="@{/assets/css/rain.css}" />
+    <link rel="stylesheet" th:href="@{/assets/css/kico.css}" />
+    <link rel="stylesheet" th:href="@{/assets/css/fantasy.css}" />
+    <link rel="stylesheet" href="https://6.cdn.moea.top/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <script src="https://6.cdn.moea.top/js/jquery@3.6.0/jquery.min.js"></script>
+
+    <th:block th:if="${head != null}">
+      <th:block th:replace="${head}" />
+    </th:block>
+  </head>
+  <body
+    th:style="'background-image: url('+${theme.config.genernal.background_image}+')'"
+  >
+
+      <aside>
+    <th:block  th:with="menu = ${menuFinder.getPrimary()}">
+      <nav class="side-nav" th:with="menuItems = ${menu.menuItems}">
+          <a 
+          th:each="menuItem : ${menuItems}"
+          th:href="@{${menuItem.status.href}}" 
+          th:text="${menuItem.spec.displayName}"></a>
+      </nav>
+    </th:block>
+      <nav class="side-action" th:if="${pluginFinder.available('PluginSearchWidget')}">
+        <a href="javascript:SearchWidget.open()">
+          <div class="search-btn"></div>
+        </a>
+      </nav>
+    </aside>
+
+    <header>
+      <div class="toggle"></div>
+      <div class="wrap min">
+        <h1 class="headline"><span th:text="${site.title}"></span></h1>
+        <div class="head-social">
+          <a
+            th:if="${theme.config.social.github != ''}"
+            rel="nofollow"
+            title="GitHub"
+            th:href="${theme.config.social.github}"
+            target="_blank"
+          >
+            <i class="fa fa-github"></i>
+          </a>
+          <a
+            th:if="${theme.config.social.weibo != ''}"
+            rel="nofollow"
+            title="Weibo"
+            th:href="${theme.config.social.weibo}"
+            target="_blank"
+          >
+            <i class="fa fa-weibo"></i>
+          </a>
+          <a
+            th:if="${theme.config.social.twitter != ''}"
+            rel="nofollow"
+            title="Twitter"
+            th:href="${theme.config.social.twitter}"
+            target="_blank"
+          >
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a
+            th:if="${theme.config.social.qq != ''}"
+            rel="nofollow"
+            title="QQ"
+            th:href="${theme.config.social.qq}"
+            target="_blank"
+          >
+            <i class="fa fa-qq"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <th:block th:replace="${content}" />
+    
+    <footer>
+    <div class="wrap mid">
+        <section th:class="foot-action">
+            <div class="to-top"></div>
+        </section>
+        <section class="foot-widget">
+            <div class="row">
+                <div class="col-m-3">
+                  <h3>最新文章：</h3>
+                    <ul class="clear" th:with="posts = ${postFinder.list(1,6)}">
+                        <li th:each="post : ${posts.items}">
+                            <a th:href="@{${post.status.permalink}}" th:text="${post.spec.title}"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-m-3">
+                  <h3>时光机：</h3>
+                    <ul class="clear" th:with="archives = ${postFinder.archives(1,6)}">
+                      <li th:each="archive : ${archives.items}">
+                        <a th:href="'/archives#year'+${archive.year}" th:text="${archive.year}+'年'"></a>
+                      </li>  
+                    </ul>
+                </div>
+                <div class="col-m-3">
+                  <h3>分类：</h3>
+                    <ul class="clear" th:each="category : ${categories}">
+                      <li>
+                        <a 
+                          th:href="@{${category.status.permalink}}"
+                          th:text="${category.spec.displayName}"></a>
+                      </li>
+                    </ul>
+                </div>
+                <!--<div class="col-m-3">
+                  <h3>最近评论：</h3>
+                        <ul class="clear">
+                                <li>
+                                    <a>a: c(6)</a>
+                                </li>
+                        </ul>
+                </div>-->
+                <div class="col-m-3">
+                    <h3>站点信息：</h3>
+                    <ul class="clear" th:with="stats = ${siteStatsFinder.getStats()}">
+                        <li th:text="'文章：'+${stats.post}"></li>
+                        <li th:text="'分类：'+${stats.category}"></li>
+                        <li th:text="'评论：'+${stats.comment}"></li>
+                        <li th:text="'访客：'+${stats.visit}"></li>
+                        <th:block th:with="posts = ${postFinder.list(1,1)}">
+                        <li th:each="post : ${posts.items}" th:text="'上次更新：'+${#dates.format(post.spec.publishTime, 'yyyy-MM-dd')}"></li>
+                        </th:block>
+                    <ul>
+                </div>
+            </div>
+        </section>
+        <section class="foot-copyright">
+            <div class="row">
+                <div class="col-m-6 left bottom to-center">
+                    
+                        <p th:if="${theme.config.beian.icp_info != null}">
+                            <a href="https://beian.miit.gov.cn" rel="nofollow" target="_blank" th:text="${theme.config.beian.icp_info}"></a>
+                        </p>
+                        
+                        <p th:if="${theme.config.beian.ga_info != ''}">
+				            <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=${settings.ga_info!}" rel="nofollow" target="_blank">
+					        <img th:src="@{/assets/images/beian.png}">
+					        <th:block th:text="${theme.config.beian.ga_info}"></th:block>
+				            </a>
+                        </p>
+                    <th:block th:if="${theme.config.plugins.hitokoto != 'c'}">
+                    <p id="foot-hitokoto">重要的是无论我们选择哪条路，都要担负起选择的责任。</p>
+                    <script src="https://v1.hitokoto.cn/?encode=js&select=%23foot-hitokoto" defer></script>
+                    </th:block>
+                    
+                </div>
+                <div class="col-m-6 right bottom to-center"><!--请保留版权, 该主题移植自奇趣保罗的 Typecho 主题: Fantasy-->
+                    <p>&copy; <th:block th:text="${#dates.format(new java.util.Date().getTime(), 'yyyy')}" />
+                      <a href="/" th:text="${site.title}"></a> 版权所有
+                    </p>
+                    <p>Powered by <a href="https://halo.run" target="_blank" rel="nofollow">Halo</a> | Theme by <a href="https://12th.icu/fantasy2" target="_blank" rel="nofollow">Fantasy</a></p>
+                </div>
+            </div>
+        </section>
+    </div>
+</footer>
+
+<script src="https://6.cdn.moea.top/js/pjax@0.2.8/pjax.min.js"></script>
+<script th:src="@{/assets/js/kico.js}"></script>
+<script th:src="@{/assets/js/rain.js}"></script>
+
+  </body>
+</html>

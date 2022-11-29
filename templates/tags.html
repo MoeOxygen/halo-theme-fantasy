@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html
+  xmlns:th="https://www.thymeleaf.org"
+  th:replace="~{layout :: html(head = null,content = ~{::content})}"
+>
+  <th:block th:fragment="content">
+    <main>
+      <div class="wrap min">
+        <section class="board head">
+          <h3>标签</h3>
+        </section>
+        <section class="board">
+          <div class="post-item"  th:each="tag : ${tags}">
+            <h3 class="title">
+              <a 
+                th:href="@{${tag.status.permalink}}"
+                th:text="${tag.spec.displayName}"></a>
+              </h3>
+          </div>
+          
+        </section>
+      </div>
+    </main>
+  </th:block>
+</html>

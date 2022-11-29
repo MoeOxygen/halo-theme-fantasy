@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html
+  xmlns:th="https://www.thymeleaf.org"
+  th:replace="~{layout :: html(head = null,content = ~{::content})}"
+>
+  <th:block th:fragment="content">
+    <main>
+      <div class="wrap min">
+        <section class="board head">
+          <h3>归档</h3>
+        </section>
+        
+        <th:block th:each="archive : ${archives.items}">
+          <section class="board">
+            <h2 th:id="'year'+${archive.year}" class="date" th:text="${archive.year}"></h2>
+            <th:block th:each="month : ${archive.months}">
+            <div class="post-item" th:each="post : ${month.posts}">
+                <time class="date" th:text="${#dates.format(post.metadata.creationTimestamp, 'yyyy-MM-dd')}"></time>
+                <h3 class="title">
+                    <a 
+                      th:href="@{${post.status.permalink}}"
+                      th:text="${post.spec.title}"></a>
+                </h3>
+            </div>
+            </th:block>
+          </section>
+        </th:block>
+      </div>
+    <section class="page-navigator" th:if="${archives.hasPrevious() || archives.hasNext()}">
+      <span class="prev">
+        <a th:if="${archives.hasPrevious()}" th:href="@{${archives.prevUrl}}"></a>
+      </span>
+
+      <span class="current">
+        <a th:text="${archives.page}"></a>
+      </span>
+
+      <span class="next">
+        <a th:if="${archives.hasNext()}" th:href="@{${archives.nextUrl}}"></a>
+      </span>
+     </section>
+    </main>
+  </th:block>
+</html>

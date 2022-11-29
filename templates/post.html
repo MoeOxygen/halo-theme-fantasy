@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html
+  xmlns:th="https://www.thymeleaf.org"
+  th:replace="~{layout :: html(head = null,content = ~{::content})}"
+>
+  <th:block th:fragment="content">
+    <main>
+      <div class="wrap min">
+        <section class="board">
+          <div class="post-title">
+            <h2 th:text="${post.spec.title}"></h2>
+            <div class="post-meta">
+              <time class="date" th:text="${#dates.format(post.metadata.creationTimestamp, 'yyyy-MM-dd')}"></time>
+              <span class="category" th:if="${not #lists.isEmpty(post.categories)}">
+                <a
+                  th:if="${#lists.size(post.categories)} gt 0"
+                  th:href="@{${post.categories[0].status.permalink}}"
+                  th:text="${post.categories[0].spec.displayName}">
+                </a>
+              </span>
+              <span class="comments" th:text="${post.stats.comment}+' 评论'"></span>
+            </div>
+          </div>
+
+          <article th:class="post-content" th:utext="${post.content.content}"></article>
+
+        </section>
+        <section class="board" th:if="${pluginFinder.available('PluginCommentWidget')}">
+          <halo:comment
+            group="content.halo.run"
+            kind="Post"
+            th:attr="name=${post.metadata.name}"/>
+        </section>
+    </main>
+  </th:block>
+</html>

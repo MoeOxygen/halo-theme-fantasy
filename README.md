@@ -28,4 +28,4 @@ Demo: [fantasy2.moea.top](https://fantasy2.moea.top)
 
 **halo-theme-fantasy** &copy; MoeOxygen 
 
-基于 [![MIT](https://img.shields.io/badge/license-MIT-orange.svg)](https://github.com/MoeOxygen/halo-theme-fantasy/blob/master/LICENSE) 许可证发行
+基于 [![MIT](https://img.shields.io/badge/license-MIT-orange.svg)](https://github.com/MoeOxygen/halo-theme-fantasy/blob/main/LICENSE) 许可证发行

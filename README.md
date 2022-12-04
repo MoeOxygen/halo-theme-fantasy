@@ -2,7 +2,7 @@
 「梦想、梦幻」
 
 适用于 Halo2.0 的 Fantasy 主题
-[Halo1.5.X可用Fantasy主题](https://github.com/moeoxygen/halo-theme-fantasy/blob/main)
+[Halo1.5.X可用Fantasy主题](https://github.com/moeoxygen/halo-theme-fantasy/tree/main)
 
 更新日志&其它: [12th.icu/fantasy2](https://12th.icu/fantasy2)
 

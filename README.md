@@ -2,7 +2,8 @@
 「梦想、梦幻」
 
 适用于 Halo博客 的 Fantasy 主题
-[Halo2.0可用的 Fantasy 主题](https://github.com/MoeOxygen/halo-theme-fantasy/tree/master)
+
+**[Halo2.0可用的 Fantasy 主题](https://github.com/MoeOxygen/halo-theme-fantasy/tree/master)**
 
 更新日志&其它: [12th.icu/fantasy](https://12th.icu/fantasy)
 

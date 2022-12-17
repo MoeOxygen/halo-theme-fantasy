@@ -36,6 +36,7 @@ Demo: [fantasy.moea.top](https://fantasy.moea.top)
 
 ## 未来支持的功能
 - [ ] 侧边栏多级导航
+- [ ] Pjax加载动画
 
 
 ## 安装主题

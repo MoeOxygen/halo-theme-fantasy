@@ -56,3 +56,17 @@ spec:
               value: o
             - label: 关闭
               value: c
+        - $formkit: text
+          name: created_time
+          label: 建站时间
+          help: 格式 "2022/01/01" , 留空则不展示
+        - $formkit: radio
+          name: nyancat
+          label: 加载动画
+          value: true
+          help: Pjax加载动画
+          options:
+            - label: Nyancat
+              value: true
+            - label: Nyancat(无彩虹)
+              value: false

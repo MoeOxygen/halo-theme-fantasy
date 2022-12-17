@@ -111,23 +111,13 @@
                     </ul>
                 </div>
                 <div class="col-m-3">
-                  <h3>分类：</h3>
-                    <ul class="clear" th:each="category : ${categories}">
-                      <li>
-                        <a 
-                          th:href="@{${category.status.permalink}}"
-                          th:text="${category.spec.displayName}"></a>
-                      </li>
-                    </ul>
-                </div>
-                <!--<div class="col-m-3">
                   <h3>最近评论：</h3>
                         <ul class="clear">
-                                <li>
+                                <!--<li>
                                     <a>a: c(6)</a>
-                                </li>
+                                </li>-->
                         </ul>
-                </div>-->
+                </div>
                 <div class="col-m-3">
                     <h3>站点信息：</h3>
                     <ul class="clear" th:with="stats = ${siteStatsFinder.getStats()}">
@@ -160,6 +150,39 @@
                     <p id="foot-hitokoto">重要的是无论我们选择哪条路，都要担负起选择的责任。</p>
                     <script src="https://v1.hitokoto.cn/?encode=js&select=%23foot-hitokoto" defer></script>
                     </th:block>
+
+                    <th:block th:if="${theme.config.plugins.created_time != ''}">
+                      <p class="foot-date">站点已萌萌哒存活了 <a>0</a> 天 <a>0</a> 小时 <a>0</a> 分 <a>0</a> 秒</p>
+                      <script>
+                        var that = this;
+                        var element = {
+                          date: $(".foot-date"),
+                        };
+                        this.foot_date = function (date) {
+                          function run_date(date) {
+                            var created = Date.parse(date);
+                            var now = new Date().getTime();
+                            var ran = now - created;
+                            var day = ran / 86400000;
+                            var day_c = Math.floor(day);
+                            var hour = 24 * (day - day_c);
+                            var hour_c = Math.floor(hour);
+                            var min = 60 * (hour - hour_c);
+                            var min_c = Math.floor(min);
+                            var sec = Math.floor(60 * (min - min_c));
+                            return (
+                              "站点已萌萌哒存活了 <a>" + day_c + "</a> 天 <a>" + hour_c + "</a> 小时 <a>" + min_c + "</a> 分 <a>" + sec + "</a> 秒"
+                            );
+                          }
+                          setInterval(function () {
+                            element.date.innerHTML = run_date(date);
+                          }, 800);
+                        };
+                        if (element.date && "[[${theme.config.plugins.created_time}]]") {
+                          this.foot_date("[[${theme.config.plugins.created_time}]]");
+                        }
+                      </script>
+                    </th:block>
                     
                 </div>
                 <div class="col-m-6 right bottom to-center"><!--请保留版权, 该主题移植自奇趣保罗的 Typecho 主题: Fantasy-->
@@ -172,6 +195,28 @@
         </section>
     </div>
 </footer>
+
+<div class="nyancat nyancat-load">
+  <style>
+      .nyancat {
+          width: 100vw;
+          height: 100vh;
+          top: 0;
+          left: 0;
+          position: fixed;
+          backdrop-filter: blur(10px);
+          z-index: 100000;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+      .nyancat img {
+          width: 272px;
+          height: 168px;
+      }
+  </style>
+          <img th:src="@{/assets/images/nyancat.gif}" alt="loading...">
+</div>
 
 <script src="https://6.cdn.moea.top/js/pjax@0.2.8/pjax.min.js"></script>
 <script th:src="@{/assets/js/kico.js}"></script>

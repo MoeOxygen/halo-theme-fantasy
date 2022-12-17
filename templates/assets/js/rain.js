@@ -1,8 +1,18 @@
 var that = this;
 var element = {
-  footer: { action: ks.select(".foot-action"), top: ks.select(".to-top") },
-  date: ks.select(".foot-date"),
+  footer: { action: ks.select(".foot-action"),
+  top: ks.select(".to-top") },
 };
+
+$(".toggle").click(function () {
+	if ($("aside").hasClass("active")) {
+		$("aside").removeClass("active");
+	}
+	else {
+		$("aside").addClass("active");
+	}
+});
+
 //Pjax
 var pjax = new Pjax({
   elements: "a:not([target=_blank])",
@@ -18,26 +28,17 @@ var pjax = new Pjax({
   scrollTo: 0,
 });
 
-function loadstart() {
-  var loadrain = document.querySelector("main");
-  loadrain.classList.add("loading");
-}
-
-function loadend() {
-  var loadrain = document.querySelector("main");
-  loadrain.classList.remove("loading");
-}
-
 document.addEventListener("pjax:send", function () {
-  loadstart();
+  $(".nyancat").removeClass("nyancat-load");
 });
 
 $(document).on("pjax:complete", function () {
-  loadend();
-  loadbangumi();
+  $(".nyancat").addClass("nyancat-load");
+  $("aside").removeClass("active");
   ks.image(".post-content:not(.exclude-image) img");
 });
 
+//Back to top
 this.to_top = function () {
   element.footer.top.onclick = function () {
     window.scrollTo(0, 0);
@@ -54,6 +55,7 @@ this.to_top = function () {
 };
 this.to_top();
 
+//Kico
 ks.image(".post-content:not(.exclude-image) img");
 
 if (window.console && window.console.log) {

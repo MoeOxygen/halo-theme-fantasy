@@ -8,7 +8,7 @@ spec:
     name: MoeOxygen
     website: 'https://moeoxygen.com'
   description: 适用于 Halo2.0 的 Fantasy 主题
-  logo: "https://halo.run/logo"
+  logo: "https://8.cdn.moea.top/halo-theme-fantasy/fantasy2.png"
   website: 'https://moeoxygen.com'
   repo: 'https://github.com/MoeOxygen/halo-theme-fantasy/tree/master'
   settingName: "theme-fantasy-setting"

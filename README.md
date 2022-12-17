@@ -2,7 +2,7 @@
 「梦想、梦幻」
 
 适用于 Halo2.0 的 Fantasy 主题
-[Halo1.5.X可用Fantasy主题](https://github.com/moeoxygen/halo-theme-fantasy/tree/main)
+[Halo1.X可用Fantasy主题](https://github.com/moeoxygen/halo-theme-fantasy/blob/main)
 
 更新日志&其它: [12th.icu/fantasy2](https://12th.icu/fantasy2)
 
@@ -28,4 +28,4 @@ Demo: [fantasy2.moea.top](https://fantasy2.moea.top)
 
 **halo-theme-fantasy** &copy; MoeOxygen 
 
-基于 [![MIT](https://img.shields.io/badge/license-MIT-orange.svg)](https://github.com/MoeOxygen/halo-theme-fantasy/blob/main/LICENSE) 许可证发行
+基于 [![MIT](https://img.shields.io/badge/license-MIT-orange.svg)](https://github.com/MoeOxygen/halo-theme-fantasy/blob/master/LICENSE) 许可证发行

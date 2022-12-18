@@ -25,6 +25,21 @@
     </div>
     </#if>
     </div>
+
+<#if settings.toc_bool!false>
+    <script src="https://6.cdn.moea.top/js/tocbot@4.12.0/tocbot.min.js"></script>
+    <script data-pjax>
+      var tocset = {
+        tocSelector: ".toc",
+        contentSelector: ".post-content",
+        headingSelector: "h1,h2,h3,h4,h5,h6",
+        scrollSmooth: true,
+        headingsOffset: 15,
+      };
+      tocbot.init(tocset);
+    </script>
+</#if>
+
 </main>
 </@layout>
 <#include "footer.ftl">

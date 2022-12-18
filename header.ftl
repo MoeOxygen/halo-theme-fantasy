@@ -12,6 +12,7 @@
     <link href="${theme_base!}/source/css/rain.css" rel="stylesheet" type="text/css"/>
     <link href="${theme_base!}/source/css/kico.css" rel="stylesheet" type="text/css"/>
     <link href="${theme_base!}/source/css/fantasy.css" rel="stylesheet" type="text/css"/>
+    <script src="https://6.cdn.moea.top/js/jquery@3.6.0/jquery.min.js"></script>
     <#if settings.toc_bool!false>
     <link rel="stylesheet" href="https://6.cdn.moea.top/css/tocbot@4.12.0/tocbot.css">
     </#if>

@@ -79,27 +79,56 @@
         </section>
     </div>
 </footer>
+
+<div class="nyancat nyancat-load">
+  <style>
+    .nyancat {
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      position: fixed;
+      backdrop-filter: blur(10px);
+      z-index: 100000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .nyancat img {
+      width: 272px;
+      height: 168px;
+    }
+  </style>
+  <img src="${theme_base!}/source/images/nyancat.gif" alt="loading...">
+</div>
+
 <script src="https://6.cdn.moea.top/js/pjax@0.2.8/pjax.min.js"></script>
-<script src="https://6.cdn.moea.top/js/jquery@3.6.0/jquery.min.js"></script>
+
 <script>
-    var rain = {
-        "bangumid":"${settings.bangumi_user!}",
-        "created":"${settings.created_time!}",
-    };
+  var rain = {
+    "created":"${settings.created_time!}",
+  };
 </script>
+
+<#-- Kico灯箱 -->
 <script src="${theme_base!}/source/js/kico.js"></script>
+
+<#-- Highlight高亮显示 -->
 <script src="https://6.cdn.moea.top/js/highlight@11.6.0/highlight.min.js"></script>
-<#if settings.toc_bool!false>
-<script src="https://6.cdn.moea.top/js/tocbot@4.12.0/tocbot.min.js"></script>
-</#if>
+<script data-pjax>hljs.highlightAll();</script>
+
 <script src="${theme_base!}/source/js/rain.js"></script>
+
+<#-- 底部一言 -->
 <#if settings.hitokoto_bool!false>
-<script src="https://v1.hitokoto.cn/?encode=js&select=%23foot-hitokoto" defer></script>
+  <script src="https://v1.hitokoto.cn/?encode=js&select=%23foot-hitokoto" defer></script>
 </#if>
+
+<#-- Aplayer -->
 <#if settings.aplayer_id?? && settings.aplayer_id != ''>
-<script src="${theme_base!}/source/js/APlayer.min.js"></script>
-<script src="${theme_base!}/source/js/Meting.min.js"></script>
-<meting-js fixed="true" server="netease" type="playlist" id="${settings.aplayer_id!}"></meting-js>
+  <script src="${theme_base!}/source/js/APlayer.min.js"></script>
+  <script src="${theme_base!}/source/js/Meting.min.js"></script>
+  <meting-js fixed="true" server="netease" type="playlist" id="${settings.aplayer_id!}"></meting-js>
 </#if>
 
 </body>

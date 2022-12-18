@@ -3,7 +3,7 @@
 
 适用于 Halo博客 的 Fantasy 主题
 
-**[Halo2.0可用的 Fantasy 主题](https://github.com/MoeOxygen/halo-theme-fantasy/tree/master)**
+**[适用于 Halo2.0 的 Fantasy 主题](https://github.com/MoeOxygen/halo-theme-fantasy/tree/master)**
 
 更新日志&其它: [12th.icu/fantasy](https://12th.icu/fantasy)
 
@@ -36,7 +36,6 @@ Demo: [fantasy.moea.top](https://fantasy.moea.top)
 
 ## 未来支持的功能
 - [ ] 侧边栏多级导航
-- [ ] Pjax加载动画
 
 
 ## 安装主题

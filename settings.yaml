@@ -22,6 +22,18 @@ genernal:
           label: 开启
         - value: false
           label: 关闭
+    gray_style:
+      name: gray_style
+      label: 灰度模式
+      type: radio
+      data-type: bool
+      dafault: false
+      description: '开启后所有页面将切换成黑白样式'
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
 social:
   label: 社交信息
   items:

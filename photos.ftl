@@ -1,21 +1,22 @@
 <#include "header.ftl">
 <@layout title="图库 - ${blog_title!}">
 <main>
-<div class="wrap-photos">
-<section class="card-grid">
-    <@photoTag method="list">
-    <#list photos as photo>
-    <div class="photos-card">
-    <div class="card-img" style="background-image: url(${photo.url})">
-    </div>
-    <div class="photos-info">
-    <h3>${photo.name!}</h3>
-    </div>
-    </div>
-    </#list>
+<section class="card-pho post-content">
+
+<@photoTag method="list">
+<#list photos as photo>
+<figure>
+    <img src="${photo.url}" alt="${photo.description}">
+    <figcaption>
+        <h2>${photo.name!}</h2>
+        <p>
+            <a href="${photo.url}"><i class="fa fa-download"></i></a>
+        </p>
+    </figcaption>
+</figure>
+</#list>
 </@photoTag>
 </section>
-</div>
 </main>
 </@layout>
 <#include "footer.ftl">

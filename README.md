@@ -21,7 +21,6 @@ Demo: [fantasy2.moea.top](https://fantasy2.moea.top)
 
 ## 后续支持
 
-- [ ] 支持 plugin-highlightjs 代码高亮插件
 - [ ] 支持 plugin-tocbot 文章目录插件
 
 ## 版权
